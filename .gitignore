@@ -1,0 +1,6 @@
+.env
+niino-bot.data.json
+.node-persist/
+logs/
+node_modules/
+yarn.lock
