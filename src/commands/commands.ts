@@ -45,6 +45,8 @@ import OwnerController from "../controllers/OwnerController";
 import MusicDownloadController from "../controllers/MusicDownloadController";
 import YoutubeController from "../controllers/YoutubeController";
 import Menu8Controller from "../controllers/Menu8Controller";
+import EraseController from "../controllers/EraseAudioController";
+import EraseMusicController from "../controllers/EraseMusicController";
 
 const queue = new PQueue({
   concurrency: 4,
@@ -161,7 +163,9 @@ export async function start(client: Client) {
             abrir: UndoToAdminsOnlyController,
             dono: OwnerController,
             mp3: MusicDownloadController,
-            youtube: YoutubeController
+            youtube: YoutubeController,
+            rm: EraseController,
+            rmMusic: EraseMusicController
           };
 
           if(validCommandRegex.test(msgBody) || validCommandCaptionRegex.test(msgBody)) {

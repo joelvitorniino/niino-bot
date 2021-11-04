@@ -1,6 +1,6 @@
 import { Client, Message } from "@open-wa/wa-automate";
 
-const { BrainlyAPI, Server } = require("brainly-api");
+const { BrainlyAPI, Server } = require("brainly-fork-api");
 
 class BrainlyCommandService {
   async execute(client: Client, message: Message, text: string) {

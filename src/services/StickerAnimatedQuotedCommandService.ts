@@ -2,22 +2,26 @@ import { Client, Message, decryptMedia, StickerMetadata, Mp4StickerConversionPro
 
 class StickerAnimatedQuotedCommandService {
     async execute(client: Client, message: Message) {
-        if(message.quotedMsg && message.quotedMsg.isMedia) {
-            const encryptMedia = message.quotedMsg.isMedia ? message.quotedMsg : message;
-            const mediaData = await decryptMedia(encryptMedia, "WhatsApp/2.2108.8 Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36");
-            const configSticker = {
-                author: "NiinoBot",
-                pack: "Feito por NiinoBot",
-            } as StickerMetadata;
+            if(message.quotedMsg && message.quotedMsg.isMedia) {
+                const encryptMedia = message.quotedMsg.isMedia ? message.quotedMsg : message;
+                const mediaData = await decryptMedia(encryptMedia, "WhatsApp/2.2108.8 Mozilla/5.0 (Macintosh; Intel Mac OS X 11_2_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36");
+                const configSticker = {
+                    author: "NiinoBot",
+                    pack: "Feito por NiinoBot",
+                } as StickerMetadata;
+    
+                const configStickerAnimated = {
+                    crop: true,
+                    startTime: `00:00:00.0`,
+                    endTime: `00:00:11.0`
+                } as Mp4StickerConversionProcessOptions;
 
-            const configStickerAnimated = {
-                crop: true,
-                startTime: `00:00:00.0`,
-                endTime: `00:00:11.0`
-            } as Mp4StickerConversionProcessOptions;
-
-            client.sendMp4AsSticker(message.from, mediaData, configStickerAnimated, configSticker);
-          };
+            try {
+                await client.sendMp4AsSticker(message.from, mediaData, configStickerAnimated, configSticker);
+            } catch {
+                await client.sendText(message.from, 'Tente diminuir o vídeo ou tente com outro gif. Lembrando que suportamos até 11 segundos de vídeo!');
+            };
+        }; 
     };
 };
 

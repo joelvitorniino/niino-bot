@@ -1,6 +1,9 @@
 .env
-niino-bot.data.json
-.node-persist/
 logs/
 node_modules/
 yarn.lock
+
+# managed by open-wa
+**.data.json
+**.node-persist**
+# end managed by open-wa

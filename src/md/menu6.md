@@ -2,6 +2,12 @@
           
 Idiomas Disponíveis:
           
+.audio af - Afrikaans
+.audio ca - Catalão
+.audio hu - Hungaro
+.audio sv - Sueco
+.audio tr - Turco
+.audio ru - Russo
 .audio br - Português
 .audio pt - Português de Portugal
 .audio ko - Coreano
