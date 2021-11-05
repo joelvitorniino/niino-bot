@@ -68,5 +68,7 @@ cd src/tts
 python3 app.py
 ```
 
+For the commands to send audio and music, change the path to your computer and its folder.
+
 ### Issue
 Any questions that arise regarding the form of use, leave your question in the "Issue" tab.
