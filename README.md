@@ -35,7 +35,7 @@ pip3 install gtts
 ```
 
 ### Niino-Bot
-#![Niino-Bot](https://instagram.fsdu11-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/242886219_588310472536218_255317743731962591_n.jpg?_nc_ht=instagram.fsdu11-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=nNiFx1kOubQAX-4wST6&edm=AABBvjUBAAAA&ccb=7-4&oh=446d6a947dba20998cf70ca513d433c9&oe=618B5A71&_nc_sid=83d603)
+![Niino-Bot](https://instagram.fsdu11-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/s640x640/242886219_588310472536218_255317743731962591_n.jpg?_nc_ht=instagram.fsdu11-1.fna.fbcdn.net&_nc_cat=106&_nc_ohc=nNiFx1kOubQAX-4wST6&edm=AABBvjUBAAAA&ccb=7-4&oh=446d6a947dba20998cf70ca513d433c9&oe=618B5A71&_nc_sid=83d603)
 
 ```
 yarn
