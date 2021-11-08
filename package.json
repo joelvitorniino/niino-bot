@@ -15,6 +15,7 @@
     "node-gtts": "^2.0.2",
     "p-queue": "6.6.2",
     "sequelize": "^6.7.0",
+    "sequelize-cli": "^6.3.0",
     "shelljs": "^0.8.4",
     "typescript": "^4.4.4"
   },
@@ -30,6 +31,7 @@
     "start": "pm2 start dist/api/app.js --name api",
     "build": "tsc --build",
     "tts": "pm2 start src/tts/app.py --name flask-app --interpreter=python3",
-    "pm2": "NODE_ENV=production pm2 start src/app.ts --watch"
+    "pm2": "NODE_ENV=production pm2 start src/app.ts --watch",
+    "migrate": "sequelize db:migrate"
   }
 }
