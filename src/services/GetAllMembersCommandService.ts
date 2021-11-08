@@ -10,7 +10,12 @@ class GetAllMembersCommandService {
                 await client.getGroupAdmins(<GroupChatId>message.chatId)
                     .then(async (admins) => {
                         if(admins.includes(<ContactId>`${message.author}`)) {
-                            await client.sendReplyWithMentions(message.from, allMembers, false || null);
+                            if(message.quotedMsg) {
+                                await client.sendReplyWithMentions(message.from, allMembers, message.quotedMsg.id);
+                            } else {
+                                await client.sendReplyWithMentions(message.from, allMembers, message.quotedMsg.id);
+                            };
+                            
                         } else {
                             await client.sendText(message.from, 'Você não tem permissão para executar este comando!');
                         }

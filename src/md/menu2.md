@@ -25,3 +25,9 @@
 .abrir - O bot irá abrir o grupo para todos os membros.
 
 .casal - Ele marca randomicamente dois individuos com o objetivo de unir os pombinhos.
+
+.casimiro - Ele irá enviar uma frase randômica deste mito!
+
+.top1 - Irá marcar 1 membro randomicamente com algum tema, EX: ".top1 corno"
+
+.top3 - Irá marcar 3 membros randomicamente com algum tema, EX: ".top3 corno"

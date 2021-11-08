@@ -7,9 +7,13 @@ const sleep = (ms: number) => {
 
 class EraseAudioCommandService {
     async execute(client: Client, message: Message) {
-        exec(`cd /home/joel/Documents/niino-bot/public/audio/ && rm *.mp3`);
-        await sleep(2000);
-        await client.sendText(message.from, 'Apagado os audios!');
+        if(message.author === '5521969693229@c.us') {
+            exec(`cd /home/joel/Documents/niino-bot/public/audio/ && rm *.mp3`);
+            await sleep(2000);
+            await client.sendText(message.from, 'Apagado os audios!');    
+        } else {
+            await client.sendText(message.from, 'Você não tem permissão para executar este comando!')
+        };
     };
 };
 

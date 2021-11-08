@@ -7,4 +7,4 @@ Menu do NiinoBot:
 .menu5 - Animais
 .menu6 - Audio
 .menu7 - Suporte
-.menu8 - Download de Midias
+.menu8 - Youtube

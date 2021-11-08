@@ -1,7 +1,6 @@
 import { Client, Message } from "@open-wa/wa-automate";
 import PQueue from "p-queue";
 import MusicController from "../controllers/MusicController";
-import BrainlyController from "../controllers/BrainlyController";
 import Niino from "../db/models/Niino";
 import StickerController from "../controllers/StickerController";
 import StickerAnimatedController from "../controllers/StickerAnimatedController";
@@ -42,11 +41,15 @@ import GroupToAdminsOnlyController from "../controllers/GroupToAdminsOnlyControl
 import UndoToAdminsOnlyController from "../controllers/UndoToAdminsOnlyController";
 import Menu7Controller from "../controllers/Menu7Controller";
 import OwnerController from "../controllers/OwnerController";
-import MusicDownloadController from "../controllers/MusicDownloadController";
 import YoutubeController from "../controllers/YoutubeController";
 import Menu8Controller from "../controllers/Menu8Controller";
 import EraseController from "../controllers/EraseAudioController";
 import EraseMusicController from "../controllers/EraseMusicController";
+import DisclosureController from "../controllers/DisclosureController";
+import WordOfCazeController from "../controllers/WordOfCazeController";
+import Get1MemberController from "../controllers/Get1MemberController";
+import Get3MemberController from "../controllers/Get3MemberController";
+import RollDiceController from "../controllers/RollDiceController";
 
 const queue = new PQueue({
   concurrency: 4,
@@ -85,10 +88,10 @@ const getCaption = (caption: string) => {
 
 export async function start(client: Client) {
 
-  // await client.getAllChats(false)
-  // .then(async (chats) => {
-  // chats.forEach((chat) => client.sendText(chat.id, 'Iniciando expediente, um grande dia a todos!!'));
-  // });
+    // await client.getAllChats(false)
+    // .then(async (chats) => {
+    // chats.forEach((chat) => client.sendText(chat.id, 'Iniciando expediente, um grande dia a todos!!'));
+    // });
 
     const unreadMessages = await client.getAllUnreadMessages();
     unreadMessages.forEach(processMessage);
@@ -122,7 +125,6 @@ export async function start(client: Client) {
           client.sendText(message.from, 'Proibido este comando neste grupo!');
         } else {
           const commands = {
-            brainly: BrainlyController,
             letra: MusicController,
             pb: BlockController,
             desb: UnblockController,
@@ -162,10 +164,14 @@ export async function start(client: Client) {
             fechar: GroupToAdminsOnlyController,
             abrir: UndoToAdminsOnlyController,
             dono: OwnerController,
-            mp3: MusicDownloadController,
             youtube: YoutubeController,
             rm: EraseController,
-            rmMusic: EraseMusicController
+            rmMusic: EraseMusicController,
+            divulgar: DisclosureController,
+            casimiro: WordOfCazeController,
+            top1: Get1MemberController,
+            top3: Get3MemberController,
+            rolla: RollDiceController
           };
 
           if(validCommandRegex.test(msgBody) || validCommandCaptionRegex.test(msgBody)) {
