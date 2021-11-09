@@ -21,7 +21,6 @@
   "devDependencies": {
     "@types/express": "^4.17.13",
     "@types/p-queue": "^3.2.1",
-    "@types/sequelize": "^4.28.10",
     "@types/shelljs": "^0.8.9",
     "@types/validator": "^13.6.4",
     "prisma": "^3.4.1"
