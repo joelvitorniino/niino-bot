@@ -1,7 +1,6 @@
 import { Client, Message } from "@open-wa/wa-automate";
 import PQueue from "p-queue";
 import MusicController from "../controllers/MusicController";
-import Niino from "../db/models/Niino";
 import StickerController from "../controllers/StickerController";
 import StickerAnimatedController from "../controllers/StickerAnimatedController";
 import BlockController from "../controllers/BlockController";
