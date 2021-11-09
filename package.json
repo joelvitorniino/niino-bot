@@ -27,10 +27,10 @@
   },
   "scripts": {
     "dev": "ts-node-dev src/app.ts",
-    "start": "pm2 start dist/api/app.js --name api",
+    "api": "pm2 start dist/api/app.js --name api",
     "build": "tsc --build",
+    "start": "pm2 start dist/app.js --name niino_bot",
     "tts": "pm2 start src/tts/app.py --name flask-app --interpreter=python3",
-    "pm2": "NODE_ENV=production pm2 start src/app.ts --watch",
     "migrate": "prisma migrate dev"
   }
 }
