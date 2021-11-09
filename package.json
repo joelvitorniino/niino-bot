@@ -34,6 +34,6 @@
     "build": "tsc --build",
     "tts": "pm2 start src/tts/app.py --name flask-app --interpreter=python3",
     "pm2": "NODE_ENV=production pm2 start src/app.ts --watch",
-    "migrate": "sequelize db:migrate"
+    "migrate": "prisma migrate dev"
   }
 }
