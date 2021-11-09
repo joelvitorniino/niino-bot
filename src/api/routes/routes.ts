@@ -1,5 +1,5 @@
 import express from 'express';
-import NiinoController from '../../db/controllers/NiinoController';
+import NiinoController from '../../controllers/NiinoController';
 
 const Niino = new NiinoController();
 
