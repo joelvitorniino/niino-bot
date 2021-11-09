@@ -1,38 +1,48 @@
 import Niino from "../models/Niino";
 import { Request, Response } from 'express';
+import prisma from "../../prisma";
 
 class NiinoController {
-    async create(request: Request, response: Response) {
-        const { groupId, command } = request.body;
+  async create(request: Request, response: Response) {
+    const { groupId, command } = request.body;
 
-        if(command === '') {
-            response.json({ data: "Comando em branco." })
-        } else {
-            await Niino.create({
-                groupId: groupId,
-                command: command
-            });
-    
-            response.json({ data: "Criado com sucesso." });
-        }
-    };
+    if (command === "") {
+      response.json({ data: "Comando em branco." });
+    } else {
+      await prisma.notallow_commands.create({
+        data: {
+          command,
+          groupId,
+        },
+      });
 
-    async delete(request: Request, response: Response) {
-        const { groupId, command } = request.body;
+      response.json({ data: "Criado com sucesso." });
+    }
+  }
 
-        if(command === "") {
-            response.json({ data: "Comando em branco." })
-        } else {
-            await Niino.destroy({
-                where: {
-                    groupId: groupId,
-                    command: command
-                }
-            });
-    
-            response.json({ data: "Removido com sucesso!" });    
-        }
-    };
+  async delete(request: Request, response: Response) {
+    const { groupId, command } = request.body;
+
+    if (command === "") {
+      response.json({ data: "Comando em branco." });
+    } else {
+
+        const commandId = await prisma.notallow_commands.findFirst({
+            where: {
+                groupId,
+                command
+            }
+        })
+
+        await prisma.notallow_commands.delete({
+          where: {
+            id: commandId.id,
+          },
+        });
+
+      response.json({ data: "Removido com sucesso!" });
+    }
+  }
 }; 
 
 export default NiinoController;

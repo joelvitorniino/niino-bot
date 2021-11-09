@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "@open-wa/wa-automate": "^4.23.7",
+    "@prisma/client": "^2.30.3",
     "arg": "^5.0.1",
     "axios": "^0.23.0",
     "dotenv": "^10.0.0",
@@ -24,10 +25,11 @@
     "@types/p-queue": "^3.2.1",
     "@types/sequelize": "^4.28.10",
     "@types/shelljs": "^0.8.9",
-    "@types/validator": "^13.6.4"
+    "@types/validator": "^13.6.4",
+    "prisma": "^2.30.3"
   },
   "scripts": {
-    "dev": "pm2 start dist/app.js --name niino-bot",
+    "dev": "ts-node-dev src/app.ts",
     "start": "pm2 start dist/api/app.js --name api",
     "build": "tsc --build",
     "tts": "pm2 start src/tts/app.py --name flask-app --interpreter=python3",
