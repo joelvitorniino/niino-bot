@@ -1,7 +1,6 @@
 import { Client, ContactId, GroupChatId, Message } from "@open-wa/wa-automate";
 import axios from "axios";
 import { commandSlice } from "../commands/commands";
-import Niino from "../db/models/Niino";
 
 class BlockCommandService {
   async execute(client: Client, message: Message) {

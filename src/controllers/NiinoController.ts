@@ -1,6 +1,5 @@
-import Niino from "../models/Niino";
 import { Request, Response } from 'express';
-import prisma from "../../prisma";
+import prisma from "../prisma";
 
 class NiinoController {
   async create(request: Request, response: Response) {
