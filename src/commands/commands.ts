@@ -185,7 +185,7 @@ export async function start(client: Client) {
         roletarussa: RouletteRussianController,
         pica: MeterofDickController,
         cornometro: CornoMeterController,
-        adblock: BlockAdsController,
+        ads: BlockAdsController,
       };
 
       if (

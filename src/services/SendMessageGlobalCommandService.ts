@@ -9,7 +9,6 @@ class SendMessageGlobalCommandService {
         if (message.author === '5521969693229@c.us') {
             await client.getAllChats(false)
             .then(async (chats) => {
-
                 chats.forEach(async (chat) => {
                     const blocked = await prisma.notallow_ads.findFirst({
                       where: {
