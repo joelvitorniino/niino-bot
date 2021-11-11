@@ -50,6 +50,9 @@ import Get1MemberController from "../controllers/Get1MemberController";
 import Get3MemberController from "../controllers/Get3MemberController";
 import RollDiceController from "../controllers/RollDiceController";
 import prisma from "../prisma";
+import RouletteRussianController from "../controllers/RouletteRussianController";
+import MeterofDickController from "../controllers/MeterofDickController";
+import CornoMeterController from "../controllers/CornoMeterController";
 
 const queue = new PQueue({
   concurrency: 4,
@@ -178,6 +181,9 @@ export async function start(client: Client) {
         top1: Get1MemberController,
         top3: Get3MemberController,
         rolla: RollDiceController,
+        roletarussa: RouletteRussianController,
+        pica: MeterofDickController,
+        cornometro: CornoMeterController
       };
 
       if (
