@@ -9,3 +9,5 @@ logs/
 .node-persist/
 
 dist/
+
+public/
