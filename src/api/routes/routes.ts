@@ -7,5 +7,6 @@ const routes = express.Router();
 
 routes.post('/block', Niino.create);
 routes.delete('/delete', Niino.delete);
+routes.post("/blockad", Niino.blockAd)
 
 export default routes;

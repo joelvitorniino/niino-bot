@@ -42,6 +42,16 @@ class NiinoController {
       response.json({ data: "Removido com sucesso!" });
     }
   }
+
+  async blockAd(request: Request, response: Response) {
+    const { groupId } = request.body;
+    
+    await prisma.notallow_ads.create({
+      groupId,
+    })
+
+    response.json({ data: "Bloqueado com sucesso!" });
+  }
 }; 
 
 export default NiinoController;

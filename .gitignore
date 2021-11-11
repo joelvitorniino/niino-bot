@@ -1,13 +1,13 @@
 node_modules
 # Keep environment variables out of version control
 .env
-
 yarn.lock
-
 logs/
-
 .node-persist/
-
 dist/
-
 public/
+
+# managed
+**.data.json
+**.node-persist**
+# end managed
