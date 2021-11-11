@@ -1,4 +1,4 @@
-.mt - Marcar todos os membros do grupo (Somente admins poderão fazer isso!)
+.mt - Marcar todos os membros do grupo (Somente admins poderão fazer isso!), lembrando que deverá marcar a msg e digitar .mt para funcionar.
 
 .top5 - Irá marcar 5 membros randomicamente com algum tema, EX: ".top5 cornos"
 
