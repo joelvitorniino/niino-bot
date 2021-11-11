@@ -31,3 +31,9 @@
 .top1 - Irá marcar 1 membro randomicamente com algum tema, EX: ".top1 corno"
 
 .top3 - Irá marcar 3 membros randomicamente com algum tema, EX: ".top3 corno"
+
+.roletarussa - Basicamente uma roleta russa se ele irá banir ou salvar o membro! Só adms podem usar.
+
+.cornometro - Indicar o nivel de corno do membro.
+
+.pica - Indicar o nível da pica do membro.
