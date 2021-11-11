@@ -54,6 +54,7 @@ import RouletteRussianController from "../controllers/RouletteRussianController"
 import MeterofDickController from "../controllers/MeterofDickController";
 import CornoMeterController from "../controllers/CornoMeterController";
 import BlockAdsController from '../controllers/BlockAdsController';
+import { RatinhoCommandController } from '../controllers/RatinhoCommandController';
 
 const queue = new PQueue({
   concurrency: 4,
@@ -186,6 +187,7 @@ export async function start(client: Client) {
         pica: MeterofDickController,
         cornometro: CornoMeterController,
         ads: BlockAdsController,
+        ratinho: RatinhoCommandController
       };
 
       if (
