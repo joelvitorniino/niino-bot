@@ -39,3 +39,5 @@
 .pica - Indicar o nível da pica do membro.
 
 .ads - Bloqueia anuncios no grupo
+
+.ratinho - Envia uma frase aleatória do ratinho
