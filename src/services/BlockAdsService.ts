@@ -8,7 +8,7 @@ export class BlockAdsService {
       const groupId = message.chatId;
 
       try {
-        await axios.post("https://localhost:3000/blockad", {
+        await axios.post("http://localhost:3000/blockad", {
           groupId,
         });
 
