@@ -16,3 +16,8 @@ model notallow_commands {
   groupId String 
   command String 
 }
+
+model notallow_ads {
+  id Int @unique() @id() @default(autoincrement())
+  groupId String
+}

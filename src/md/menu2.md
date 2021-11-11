@@ -37,3 +37,5 @@
 .cornometro - Indicar o nivel de corno do membro.
 
 .pica - Indicar o nível da pica do membro.
+
+.ads - Bloqueia anuncios no grupo

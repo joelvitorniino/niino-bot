@@ -53,6 +53,7 @@ import prisma from "../prisma";
 import RouletteRussianController from "../controllers/RouletteRussianController";
 import MeterofDickController from "../controllers/MeterofDickController";
 import CornoMeterController from "../controllers/CornoMeterController";
+import BlockAdsController from '../controllers/BlockAdsController';
 
 const queue = new PQueue({
   concurrency: 4,
@@ -183,7 +184,8 @@ export async function start(client: Client) {
         rolla: RollDiceController,
         roletarussa: RouletteRussianController,
         pica: MeterofDickController,
-        cornometro: CornoMeterController
+        cornometro: CornoMeterController,
+        adblock: BlockAdsController,
       };
 
       if (
