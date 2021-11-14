@@ -15,7 +15,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with:
-        server: 31.220.20.119
-        username: root
-        password: 1@@Senhaa1@@Senhaa
+        server: ${ ftp_server }
+        username: ${ ftp_username }
+        password: ${ ftp_password }
         port: 22
